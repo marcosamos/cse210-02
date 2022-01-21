@@ -1,4 +1,3 @@
-from random import random
 from game.card import Card
 
 # Hi all - I started this Director file and I don't think I am doing it correctly. I am realizing now that I may have put some of the 
@@ -65,20 +64,7 @@ class Director:
             return
 
         score = 300
-        card = random(1,13)
-        print(f"The card is: {card} ")
-        guess = input("Higher or lower? (h/l) ")
-        next_card = random(1,13)
-        print(f"Next card was: {next_card}")
-
-        if guess == "h" and next_card > card:
-            score = score + 100
-        else:
-            score = score - 75
-        
-        return score
-
-    score = do_updates()     
+        # add new code with the instance card     
 
     def do_outputs(self):
         """Displays the card and the score. 
