@@ -24,7 +24,7 @@ class Director:
             self (Director): an instance of Director.
         """
 
-        self.card = []
+        self.card = 0
         self.is_playing = True
         self.score = 0
         self.total_score = 0
@@ -36,11 +36,15 @@ class Director:
         Args: 
             self (Director): an instance of Director.
         """
+        draw_card = input("Draw card? (y/n) ")
+        self.is_playing = (draw_card =="y")
 
         while self.is_playing:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
+        
+
 
     def get_inputs(self):
         """Ask the user if they want to draw.
@@ -49,8 +53,8 @@ class Director:
             self (Director): an instance of Director.
         """
 
-        draw_card = input("Draw card? (y/n) ")
-        self.is_playing = (draw_card =="y")
+        display_card = card.draw_card
+        guess = input("Higher or lower? [h/l]")
 
 
     def do_updates(self):
@@ -77,6 +81,8 @@ class Director:
         if not self.is_playing:
             return
         
+        card.draw_card
+
         print(f"Your score is: {score}")
 
     
